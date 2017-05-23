@@ -1,3 +1,49 @@
+<?php
+require 'config.php';
+// Create connection
+/*
+ *
+ *
+ *
+ * ANGLICKY JAZYK JE NA     echo $pole1[0]['Title-EN'];  A   echo $pole2[0]['Title-EN'];
+ *
+ *
+ *
+ *
+ * */
+$conn = new mysqli($servername, $username, $password, $dbname);
+$conn->set_charset("utf8");
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT * FROM FOTOGALERIA WHERE Date = '2017-02-07'";
+$sql2 = "SELECT * FROM FOTOGALERIA WHERE Date = '2015-09-25'";
+$result = $conn->query($sql);
+$result2 = $conn->query($sql2);
+
+$pole1 = array();
+$pole2 = array();
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $pole1[] = $row;
+    }
+} else {
+    echo "ERROR: Nenajdeny vyraz v databaze";
+}
+if ($result2->num_rows > 0) {
+    // output data of each row
+    while($row2 = $result2->fetch_assoc()) {
+        $pole2[] = $row2;
+    }
+} else {
+    echo "ERROR: Nenajdeny vyraz v databaze";
+}
+//print_r($pole1);
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +69,7 @@
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Fotogaleria -->
-    <script src="fotogaleria/foto.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -131,51 +177,81 @@
                 Fotogaléria
             </h1>
         </div>
-        <div class="col-md-4">
-            <div class="panel">
-                <div class="bg shadow cursor" onclick="openModal();currentSlide(1)" >
-                    <p class="foto">Deň otvorených dverí ÚAMT FEI STU (7.2.2017)</p>
-                </div>
-            </div>
+        <div class="col-lg-12">
+            <h4>
+                <?php
+                    echo $pole1[0]['Title-SK'];
+                ?>
+            </h4>
         </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+        <?php
+        for ($i = 0; $i < count($pole1); $i++ ) {
+                ?>
+                <div class="col-md-2">
+                    <div class="panel">
+                        <div class="shadow cursor" onclick="openModal(1);currentSlide(<?php echo $i+1;?>)" >
+                            <img src="fotogaleria/event001/<?php echo $pole1[$i]['Folder'];?>.JPG" alt="">
+                            <!--<p class="foto">Deň otvorených dverí ÚAMT FEI STU (7.2.2017)</p>-->
+                        </div>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
+                <?php
+        }
+        ?>
     </div>
-    <!-- /.row -->
-
+    <hr>
+        <div class="row">
+        <div class="col-lg-12">
+            <h4>
+                <?php
+                echo $pole2[0]['Title-SK'];
+                ?>
+            </h4>
+        </div>
+        <?php
+        for ($i = 0; $i < count($pole2); $i++ ) {
+            ?>
+            <div class="col-md-2">
+                <div class="panel">
+                    <div class="shadow cursor" onclick="openModal(2);currentSlide(<?php echo $i+1;?>)" >
+                        <img src="fotogaleria/event002/<?php echo $pole2[$i]['Folder'];?>.jpg" alt="">
+                        <!--<p class="foto">Deň otvorených dverí ÚAMT FEI STU (7.2.2017)</p>-->
+                    </div>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
+    </div>
     <div id="Mod" class="mod">
-        <span class="cl cursor" onclick="closeModal()">&times;</span>
+        <span class="cl cursor" onclick="closeModal(1)">&times;</span>
 
         <div class="content">
+            <?php
+            for ($i = 0; $i < count($pole1); $i++ ) {
+            ?>
             <div class="slides">
-                <div class="cislo">1 / 6</div>
-                <img src="fotogaleria/dod_feb17/_MG_5627(1).JPG" alt="">
+                <div class="cislo"><?php echo $i+1;?> / <?php echo count($pole1);?></div>
+                <img src="fotogaleria/event001/<?php echo $pole1[$i]['Folder'];?>.JPG" alt="">
             </div>
+            <?php }?>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
 
-            <div class="slides">
-                <div class="cislo">2 / 6</div>
-                <img src="fotogaleria/dod_feb17/_MG_5635(1).JPG" alt="">
-            </div>
+    <div id="Mod2" class="mod">
+        <span class="cl cursor" onclick="closeModal(2)">&times;</span>
+
+        <div class="content">
+            <?php
+            for ($i = 0; $i < count($pole2); $i++ ) {
+                ?>
+                <div class="gal">
+                    <div class="cislo"><?php echo $i+1;?> / <?php echo count($pole2);?></div>
+                    <img src="fotogaleria/event002/<?php echo $pole2[$i]['Folder'];?>.jpg" alt="">
+                </div>
+            <?php }?>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
@@ -201,6 +277,7 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
+<script src="fotogaleria/foto.js"></script>
 <!-- Script to Activate the Carousel -->
 <script>
     $('.carousel').carousel({
