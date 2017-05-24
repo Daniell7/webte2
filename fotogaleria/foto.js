@@ -34,13 +34,32 @@ var p = `{
     ]
 }` 
 var obj = JSON.parse(p);
+var choice = 0;
 
-function openModal() {
-  document.getElementById('Mod').style.display = "block";
+function openModal(p) {
+  if(p==1){
+    document.getElementById('Mod').style.display = "block";
+    choice = 1;
+    console.log(1);
+  }
+  if(p==2){
+    document.getElementById('Mod2').style.display = "block";
+    choice = 2;
+    console.log(2);
+  }
 }
 
-function closeModal() {
-  document.getElementById('Mod').style.display = "none";
+function closeModal(p) {
+    if(p==1){
+        document.getElementById('Mod').style.display = "none";
+        choice = 0;
+        console.log(1);
+    }
+    if(p==2){
+        document.getElementById('Mod2').style.display = "none";
+        choice = 0;
+        console.log(2);
+    }
 }
 
 var slideIndex = 1;
@@ -67,21 +86,40 @@ function currentSlide(n){
 }
 
 function showSlides(n){
-  var i;
-  var slides = document.getElementsByClassName("slides");
-  var captionText = document.getElementById("desc");
-  
-  if (n > slides.length){
-    slideIndex = 1;
+  if(choice == 1) {
+      var i;
+      var slides = document.getElementsByClassName("slides");
+      //var captionText = document.getElementById("desc");
+
+      if (n > slides.length) {
+          slideIndex = 1;
+      }
+      if (n < 1) {
+          slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      //captionText.innerHTML = "<h2>" + obj.photos[slideIndex-1].title +"</h2><br>"+ obj.photos[slideIndex-1].description;
   }
-  if (n < 1) {
-    slideIndex = slides.length;
+  if(choice == 2){
+      var i;
+      var slides = document.getElementsByClassName("gal");
+      //var captionText = document.getElementById("desc");
+
+      if (n > slides.length) {
+          slideIndex = 1;
+      }
+      if (n < 1) {
+          slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+
+      slides[slideIndex - 1].style.display = "block";
   }
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
- 
-  slides[slideIndex-1].style.display = "block";
-  captionText.innerHTML = "<h2>" + obj.photos[slideIndex-1].title +"</h2><br>"+ obj.photos[slideIndex-1].description;
 }
 
