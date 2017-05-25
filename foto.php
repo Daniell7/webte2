@@ -98,9 +98,7 @@ include 'menu.php';
         </div>
         <div class="col-lg-12">
             <h4>
-                <?php
-                    echo $pole1[0]['Title-SK'];
-                ?>
+                <?php echo $translate[$_SESSION["lang"]]["dod"];?>
             </h4>
         </div>
         <?php
@@ -123,7 +121,7 @@ include 'menu.php';
         <div class="col-lg-12">
             <h4>
                 <?php
-                echo $pole2[0]['Title-SK'];
+                 echo $translate[$_SESSION["lang"]]["nocvysk"];
                 ?>
             </h4>
         </div>
@@ -196,7 +194,7 @@ include 'menu.php';
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
-<script src="js/foto.js"></script>
+<script src="fotogaleria/foto.js"></script>
 <!-- Script to Activate the Carousel -->
 <script>
     $('.carousel').carousel({

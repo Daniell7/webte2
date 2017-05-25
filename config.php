@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "tim10";
-$password = "ukmt";
-$dbname = "databaza";
+$username = "root";
+$password = "tester";
+$dbname = "webtech2_projekt";
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);

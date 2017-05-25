@@ -182,6 +182,15 @@ $translate["ru"]["sekretariat"]="Секретариат";
 $translate["sk"]["secrname"]="Katarína Kermietova";
 $translate["en"]["secrname"]="Katarina Kermietova";
 $translate["ru"]["secrname"]="Катарина Кермиетова";
+//fotogaleria.php
+
+$translate["sk"]["nocvysk"]="Noc výskumníkov";
+$translate["en"]["nocvysk"]="Night of researchers ";
+$translate["ru"]["nocvysk"]="Ночь исследователей";
+
+$translate["sk"]["dod"]="Deň otvorených dverí na ÚAMT FEI STU";
+$translate["en"]["dod"]="Open door day in Institute of Automotive Mechatronics";
+$translate["ru"]["dod"]="День открытых дверей в Институте автомобильной мехатроники";
 
 $translate["sk"]["youtube"]="Youtube ústavu";
 $translate["en"]["youtube"]="Intitute’s Youtube channel";
