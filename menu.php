@@ -2,15 +2,39 @@
 body {
     padding-top: 50px;
 }
+
 .color-link{
     background-color: red;
     color: white !important;
 }
+
 .color-link:hover{
     color: black !important;
 }
 </style>
-
+<script>
+    function language(selector){
+        
+        console.log(selector.value);
+        
+         var xmlhttp = new XMLHttpRequest();
+       xmlhttp.onreadystatechange = function() {
+         if (this.readyState == 4 && this.status == 200) {
+             location.reload();
+            }
+            };
+        xmlhttp.open("GET", "functions.php?lang="+selector.value, true);
+        xmlhttp.send();
+        
+    }
+</script>
+<?php
+include 'texty.php';
+    session_start(); 
+    if(!isset($_SESSION["lang"])){
+        $_SESSION["lang"]="sk";
+    }
+?>
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -20,44 +44,51 @@ body {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">Hlavná stránka</a>
+            <a class="navbar-brand" href="index.php"><?php echo $translate[$_SESSION["lang"]]["main"];?></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                
+                <li>
+                    <span style="color:grey;"><?php echo $translate[$_SESSION["lang"]]["langSel"]; ?></span> 
+                <select val="lang" id="lang_sel" onchange="language(this)">
+                    <option <?php if($_SESSION["lang"]=="sk"){echo 'selected="true"';}?> value="sk">Slovensky</option>
+                    <option <?php if($_SESSION["lang"]=="en"){echo 'selected="true"';}?>value="en">English</option>
+                    <option <?php if($_SESSION["lang"]=="ru"){echo 'selected="true"';}?> value="ru">Русский (Russian)</option>
+                </select>
+                </li>
             </ul>
             <ul class="nav navbar-nav">
                     <li>
-                        <a href="onas.php">O nás</a>
+                        <a href="onas.php"><?php echo $translate[$_SESSION["lang"]]["about"]; ?></a>
                     </li>
                     <li>
-                        <a href="pracovnici.php">Pracovníci</a>
+                        <a href="pracovnici.php"><?php echo $translate[$_SESSION["lang"]]["staff"]; ?></a>
                     </li>
                     <li>
-                        <a href="studium.php">Štúdium</a>
+                        <a href="studium.php"><?php echo $translate[$_SESSION["lang"]]["study"]; ?></a>
                     </li>
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Výskum<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $translate[$_SESSION["lang"]]["research"]; ?><b class="caret"></b></a>
                     <ul class="dropdown-menu multi-level">
-                        <li><a href="projekty.php">Projekty</a></li>
+                        <li><a href="projekty.php"><?php echo $translate[$_SESSION["lang"]]["projects"]; ?></a></li>
                         
                     
                         
                             <li class="dropdown-submenu">
-                            <a href="vyskumoblast.php" class="dropdown-toggle" data-toggle="dropdown-toggle disabled">Výskumné oblasti</a>
+                            <a href="vyskumoblast.php" class="dropdown-toggle" data-toggle="dropdown-toggle disabled"><?php echo $translate[$_SESSION["lang"]]["retopics"]; ?></a>
                             <ul class="dropdown-menu">
                                
                                 <li>
-                                <a href="motokara.php">Elektrická motokára </a>
+                                <a href="motokara.php"><?php echo $translate[$_SESSION["lang"]]["ecart"];?> </a>
                             </li>
                             <li>
-                                <a href="vozidlo.php">Autonómne vozidlo 6×6</a>
+                                <a href="vozidlo.php"><?php echo $translate[$_SESSION["lang"]]["6x6"];?></a>
                             </li>
                             <li>
-                                <a href="3Dkocka.php">3D LED kocka</a>
+                                <a href="3Dkocka.php"><?php echo $translate[$_SESSION["lang"]]["ledcube"];?></a>
                             </li>
                             <li>
-                                <a href="bio.php">Biomechatronika</a>
+                                <a href="bio.php"><?php echo $translate[$_SESSION["lang"]]["biomech"];?></a>
                             </li>
                                 
                             </ul>
@@ -65,28 +96,28 @@ body {
                     </ul>
                 </li>
                  <li>
-                        <a href="aktuality.php">Aktuality</a>
+                        <a href="aktuality.php"><?php echo $translate[$_SESSION["lang"]]["news"]; ?></a>
                     </li>
                 <li>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aktivity<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $translate[$_SESSION["lang"]]["activity"]; ?><b class="caret"></b></a>
                     <ul class="dropdown-menu multi-level">
                          <li>
-                                <a href="foto.php">Fotogaléria</a>
+                                <a href="foto.php"><?php echo $translate[$_SESSION["lang"]]["photos"]; ?></a>
                             </li>
                             <li>
-                                <a href="video.php">Videá</a>
+                                <a href="video.php"><?php echo $translate[$_SESSION["lang"]]["video"]; ?></a>
                             </li>
                             <li>
-                                <a href="media.php">Médiá</a>
+                                <a href="media.php"><?php echo $translate[$_SESSION["lang"]]["media"]; ?></a>
                             </li>
                     
                         
                             <li class="dropdown-submenu">
-                            <a href="weby.php" class="dropdown-toggle" data-toggle="dropdown-toggle disabled">Naše tématické web stránky</a>
+                            <a href="weby.php" class="dropdown-toggle" data-toggle="dropdown-toggle disabled"><?php echo $translate[$_SESSION["lang"]]["themeweb"];?></a>
                             <ul class="dropdown-menu">
                                
                                 <li>
-                                <a href="http://www.e-mobilita.fei.stuba.sk/">Elektromobilita</a>
+                                <a href="http://www.e-mobilita.fei.stuba.sk/"><?php echo $translate[$_SESSION["lang"]]["elmobil"];?></a>
                             </li>
                           
                             </ul>
@@ -94,11 +125,10 @@ body {
                     </ul>
                 </li>
                  <li>
-                        <a href="kontakt.php">Kontakt</a>
+                        <a href="kontakt.php"><?php echo $translate[$_SESSION["lang"]]["contact"]; ?></a>
                     </li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
 </div>
-
 

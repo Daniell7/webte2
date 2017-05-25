@@ -1,5 +1,7 @@
 <?php
 require 'config.php';
+include 'texty.php';
+session_start();
 // Create connection
 /*
  *
@@ -55,7 +57,7 @@ $conn->close();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Fotogaléria</title>
+    <title><?php echo $translate[$_SESSION["lang"]]["photos"];?></title>
     <link href="css/menu.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -91,7 +93,7 @@ include 'menu.php';
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">
-                Fotogaléria
+                <?php echo $translate[$_SESSION["lang"]]["photos"];?>
             </h1>
         </div>
         <div class="col-lg-12">
@@ -194,7 +196,7 @@ include 'menu.php';
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
-<script src="js/foto.js"></script>
+<script src="fotogaleria/foto.js"></script>
 <!-- Script to Activate the Carousel -->
 <script>
     $('.carousel').carousel({

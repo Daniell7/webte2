@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php session_start();
+include 'texty.php';
+?>
 <html lang="en">
 
 <head>
@@ -9,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Kontakt</title>
+    <title><?php echo $translate[$_SESSION["lang"]]["contact"];?></title>
     <link href="css/menu.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +42,7 @@ include 'menu.php';
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Kontakt
+            <h1 class="page-header"><?php echo $translate[$_SESSION["lang"]]["contact"];?>
             </h1>
         </div>
     </div>
@@ -49,17 +52,13 @@ include 'menu.php';
     <div class="row">
         <!-- Contact Details Column -->
         <div class="col-md-4">
-            <h3>Kontaktné údaje</h3>
+            <h3><?php echo $translate[$_SESSION["lang"]]["cdata"];?></h3>
             <p>
-                Ústav automobilovej mechatroniky<br>
-                Fakulta elektrotechniky a informatiky STU v Bratislave<br>
-                Ilkovičova 3<br>
-                812 19 Bratislava<br>
-                Slovensko
+                <?php echo $translate[$_SESSION["lang"]]["adresa"];?>
             </p>
             <hr>
-            <h4>Sekretariát</h4><br>
-            <p>Katarina Kermietova</p>
+            <h4><?php echo $translate[$_SESSION["lang"]]["sekretariat"];?></h4><br>
+            <p><?php echo $translate[$_SESSION["lang"]]["secrname"];?></p>
             <p><i class="fa fa-phone"></i>
                 +421 260 291 598</p>
             <p><i class="fa fa-envelope-o"></i>
