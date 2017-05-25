@@ -82,9 +82,7 @@ $translate["sk"]["themeweb"]="Naše tématické web stránky";
 $translate["en"]["themeweb"]="Our theme webpages ";
 $translate["ru"]["themeweb"]="Наши тематические сайты";
 
-$translate["sk"]["biomech"]="Biomechatronika";
-$translate["en"]["biomech"]="Biomechatronics";
-$translate["ru"]["biomech"]="Биомехатроника";
+
 
 $translate["sk"]["elmobil"]="Elektromobilita";
 $translate["en"]["elmobil"]="Electromobility";

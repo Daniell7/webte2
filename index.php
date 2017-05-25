@@ -13,7 +13,7 @@ include 'texty.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Domov - ÚAMT - FEI STU</title>
+    <title><?php echo $translate[$_SESSION["lang"]]["welcome"];?></title>
     <link href="css/menu.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
