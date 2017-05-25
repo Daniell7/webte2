@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+.slides{
+    display: none;
+}
+
+.cursor {
+    cursor: pointer
+}
+
+.shadow {
+    transition: 0.5s
+}
+
+.shadow:hover {
+    box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.3);
+}

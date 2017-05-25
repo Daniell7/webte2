@@ -1,3 +1,40 @@
+<?php
+require 'config.php';
+// Create connection
+/*
+ *
+ *
+ *
+ * ANGLICKY JAZYK JE NA     echo $videos[0]['Title-EN'];
+ *
+ *
+ *
+ *
+ * */
+$conn = new mysqli($servername, $username, $password, $dbname);
+$conn->set_charset("utf8");
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT * FROM VIDEO";
+$result = $conn->query($sql);
+
+$videos = array();
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $videos[] = $row;
+    }
+} else {
+    echo "ERROR: Nenajdeny vyraz v databaze";
+}
+
+//print_r($videos);
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +53,7 @@
 
     <!-- Custom CSS -->
     <link href="css/modern-business.css" rel="stylesheet">
-
+    <link href="css/video.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="image/favicon.png" type="image/png" sizes="16x16">
@@ -44,24 +81,28 @@ include 'menu.php';
                 Videá
             </h1>
         </div>
-        <div class="col-md-4">
+        <?php
+        for ($i = 0; $i < count($videos); $i++ ) {
+        ?>
+        <div class="col-md-12">
             <div class="panel panel-default">
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/i5b--NtRj8M" frameborder="0" allowfullscreen></iframe>
+                <div class="panel-heading text-center shadow cursor" onclick="currentSlide(<?php echo $i+1;?>)">
+                    <h4><?php echo $videos[$i]['Title-SK'];?></h4>
+                </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/i5b--NtRj8M" frameborder="0" allowfullscreen></iframe>
+
+            <div class="col-md-6 slides center-block">
+
+                    <iframe class="player" width="100%" height="315" src="https://www.youtube.com/embed/<?php echo $videos[$i]['Link'];?>" frameborder="0" allowfullscreen></iframe>
+
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/i5b--NtRj8M" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
+
+        <?php
+        }
+        ?>
     </div>
     <!-- /.row -->
-
     <hr>
 
     <!-- Footer -->
@@ -81,13 +122,12 @@ include 'menu.php';
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
-
+<script src="js/video.js"></script>
 <!-- Script to Activate the Carousel -->
 <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
-
 </script>
 
 </body>

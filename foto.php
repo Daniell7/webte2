@@ -194,7 +194,7 @@ include 'menu.php';
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
-<script src="fotogaleria/foto.js"></script>
+<script src="js/foto.js"></script>
 <!-- Script to Activate the Carousel -->
 <script>
     $('.carousel').carousel({
