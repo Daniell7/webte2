@@ -165,12 +165,12 @@ include 'menu.php';
 
     <!-- Footer -->
     <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Your Website 2014</p>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; DIvan LKorciciak DPetrik PFuchs PChynoransky</p>
+                </div>
             </div>
-        </div>
-    </footer>
+</footer>
 
 </div>
 <!-- /.container -->
