@@ -196,6 +196,52 @@ $translate["sk"]["youtube"]="Youtube ústavu";
 $translate["en"]["youtube"]="Intitute’s Youtube channel";
 $translate["ru"]["youtube"]="YouTube института";
 
-$translate["sk"]["youtube"]="Youtube ústavu";
-$translate["en"]["youtube"]="Intitute’s Youtube channel";
-$translate["ru"]["youtube"]="YouTube института";
+
+//kocka
+$translate["sk"]["techdata"]="Technické údaje";
+$translate["en"]["techdata"]="Technical specifications";
+$translate["ru"]["techdata"]="спецификации";
+
+$translate["sk"]["cubeinfo"]="Zobrazená kocka bola vytvorená v rámci diplomovej práce. "
+        . "Bol k nej vytvorený vzdialený prístup cez Internet, čo umožňuje užívateľovi vkladať do "
+        . "kocky vlastný kód, ktorý ovplyvňuje jej správanie sa.";
+$translate["en"]["cubeinfo"]="Displayed cube was created within the diploma thesis. It was created "
+        . "for remote access via the Internet. It allows the user to insert custom code blocks and in"
+        . " this way to influence its behavior.";
+$translate["ru"]["cubeinfo"]="Отображаемый куб был создан в диссертации. Это было создано для удаленного "
+        . "доступа через Интернет, что позволяет пользователю установить пользовательские блоки кода,"
+        . " который влияет на его поведение.";
+
+//motokara
+
+$translate["sk"]["cartweight"]="Hmotnosť: 12,5kg";
+$translate["en"]["cartweight"]="Weight: 12.5kg";
+$translate["ru"]["cartweight"]="Вес: 12,5 кг";
+
+$translate["sk"]["cartdimen"]="Rozmery (d x š x v): 614 x 495 x 269 mm";
+$translate["en"]["cartdimen"]="Dimensions (L x W x H): 614 x 495 x 269 mm";
+$translate["ru"]["cartdimen"]="    (Д х Ш х В): 614 х 495 х 269 мм";
+
+$translate["sk"]["control"]="Spôsob ovládania: Diaľkové ovládanie, riadené mikroprocesorom";
+$translate["en"]["control"]="Control method: Microprocessor-controlled remote control";
+$translate["ru"]["control"]="Способ управления: пульт дистанционного управления, управляемый микропроцессором";
+
+$translate["sk"]["drive"]="Pohon: 6×6, každé koleso samostatne riadené BLDC elektromotorom";
+$translate["en"]["drive"]="Drive: 6 × 6, each wheel independently controlled by BLDC electrical engine";
+$translate["ru"]["drive"]="Привод: 6 × 6, каждое колесо независимо друг от друга управляемое BLDC электрический двигатель";
+
+$translate["sk"]["power"]="Celkový výkon elektromotorov: 6x 175W";
+$translate["en"]["power"]="Total engine power: 6x 175W";
+$translate["ru"]["power"]="Общая электрическая мощность: 175 Вт 6x";
+
+$translate["sk"]["supply"]="Napájanie motorov: 6x DC/​AC menič";
+$translate["en"]["supply"]="Power supply: 6x DC / AC converter";
+$translate["ru"]["supply"]="Мощность двигателя: 6й DC / AC преобразователь";
+
+$translate["sk"]["source"]="Zdroj el. prúdu: 4x Li-​Pol akumulátory";
+$translate["en"]["source"]="Source of el. Current: 4x Li-Pol accumulators";
+$translate["ru"]["source"]="Источник питания. Поток: 4 батареи Li-Pol";
+
+$translate["sk"]["capacity"]="Celková kapacita akumulátorov: 13,2 Ah";
+$translate["en"]["capacity"]="Total battery capacity: 13.2 Ah";
+$translate["ru"]["capacity"]="Общая емкость батареи: 13,2 А";

@@ -23,7 +23,7 @@ body {
              location.reload();
             }
             };
-        xmlhttp.open("GET", "functions.php?lang="+selector.value, true);
+        xmlhttp.open("GET", "/projekt/webte2/functions.php?lang="+selector.value, true);
         xmlhttp.send();
         
     }
@@ -44,7 +44,7 @@ include 'texty.php';
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php"><?php echo $translate[$_SESSION["lang"]]["main"];?></a>
+            <a class="navbar-brand" href="/semzad/webte2/index.php"><?php echo $translate[$_SESSION["lang"]]["main"];?></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -53,42 +53,42 @@ include 'texty.php';
                 <select val="lang" id="lang_sel" onchange="language(this)">
                     <option <?php if($_SESSION["lang"]=="sk"){echo 'selected="true"';}?> value="sk">Slovensky</option>
                     <option <?php if($_SESSION["lang"]=="en"){echo 'selected="true"';}?>value="en">English</option>
-                    <option <?php if($_SESSION["lang"]=="ru"){echo 'selected="true"';}?> value="ru">Русский (Russian)</option>
+                    <option <?php if($_SESSION["lang"]=="ru"){echo 'selected="true"';}?> value="ru">Pусский (Russian)</option>
                 </select>
                 </li>
             </ul>
             <ul class="nav navbar-nav">
                     <li>
-                        <a href="onas.php"><?php echo $translate[$_SESSION["lang"]]["about"]; ?></a>
+                        <a href="/semzad/webte2/onas.php"><?php echo $translate[$_SESSION["lang"]]["about"]; ?></a>
                     </li>
                     <li>
-                        <a href="pracovnici.php"><?php echo $translate[$_SESSION["lang"]]["staff"]; ?></a>
+                        <a href="/semzad/webte2/pracovnici.php"><?php echo $translate[$_SESSION["lang"]]["staff"]; ?></a>
                     </li>
                     <li>
-                        <a href="studium.php"><?php echo $translate[$_SESSION["lang"]]["study"]; ?></a>
+                        <a href="/semzad/webte2/studium.php"><?php echo $translate[$_SESSION["lang"]]["study"]; ?></a>
                     </li>
                 <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $translate[$_SESSION["lang"]]["research"]; ?><b class="caret"></b></a>
                     <ul class="dropdown-menu multi-level">
-                        <li><a href="projekty.php"><?php echo $translate[$_SESSION["lang"]]["projects"]; ?></a></li>
+                        <li><a href="/semzad/webte2/projekty.php"><?php echo $translate[$_SESSION["lang"]]["projects"]; ?></a></li>
                         
                     
                         
                             <li class="dropdown-submenu">
-                            <a href="vyskumoblast.php" class="dropdown-toggle" data-toggle="dropdown-toggle disabled"><?php echo $translate[$_SESSION["lang"]]["retopics"]; ?></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown-toggle disabled"><?php echo $translate[$_SESSION["lang"]]["retopics"]; ?></a>
                             <ul class="dropdown-menu">
                                
                                 <li>
-                                <a href="motokara.php"><?php echo $translate[$_SESSION["lang"]]["ecart"];?> </a>
+                                <a href="/semzad/webte2/motokara.php"><?php echo $translate[$_SESSION["lang"]]["ecart"];?> </a>
                             </li>
                             <li>
-                                <a href="vozidlo.php"><?php echo $translate[$_SESSION["lang"]]["6x6"];?></a>
+                                <a href="/semzad/webte2/vozidlo.php"><?php echo $translate[$_SESSION["lang"]]["6x6"];?></a>
                             </li>
                             <li>
-                                <a href="3Dkocka.php"><?php echo $translate[$_SESSION["lang"]]["ledcube"];?></a>
+                                <a href="/semzad/webte2/3Dkocka.php"><?php echo $translate[$_SESSION["lang"]]["ledcube"];?></a>
                             </li>
                             <li>
-                                <a href="bio.php"><?php echo $translate[$_SESSION["lang"]]["biomech"];?></a>
+                                <a href="/semzad/webte2/bio.php"><?php echo $translate[$_SESSION["lang"]]["biomech"];?></a>
                             </li>
                                 
                             </ul>
@@ -96,24 +96,24 @@ include 'texty.php';
                     </ul>
                 </li>
                  <li>
-                        <a href="aktuality.php"><?php echo $translate[$_SESSION["lang"]]["news"]; ?></a>
+                        <a href="/semzad/webte2/aktuality.php"><?php echo $translate[$_SESSION["lang"]]["news"]; ?></a>
                     </li>
                 <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $translate[$_SESSION["lang"]]["activity"]; ?><b class="caret"></b></a>
                     <ul class="dropdown-menu multi-level">
                          <li>
-                                <a href="foto.php"><?php echo $translate[$_SESSION["lang"]]["photos"]; ?></a>
+                                <a href="/semzad/webte2/foto.php"><?php echo $translate[$_SESSION["lang"]]["photos"]; ?></a>
                             </li>
                             <li>
-                                <a href="video.php"><?php echo $translate[$_SESSION["lang"]]["video"]; ?></a>
+                                <a href="/semzad/webte2/video.php"><?php echo $translate[$_SESSION["lang"]]["video"]; ?></a>
                             </li>
                             <li>
-                                <a href="media.php"><?php echo $translate[$_SESSION["lang"]]["media"]; ?></a>
+                                <a href="/semzad/webte2/media.php"><?php echo $translate[$_SESSION["lang"]]["media"]; ?></a>
                             </li>
                     
                         
                             <li class="dropdown-submenu">
-                            <a href="weby.php" class="dropdown-toggle" data-toggle="dropdown-toggle disabled"><?php echo $translate[$_SESSION["lang"]]["themeweb"];?></a>
+                            <a href="/semzad/webte2/weby.php" class="dropdown-toggle" data-toggle="dropdown-toggle disabled"><?php echo $translate[$_SESSION["lang"]]["themeweb"];?></a>
                             <ul class="dropdown-menu">
                                
                                 <li>
@@ -125,7 +125,7 @@ include 'texty.php';
                     </ul>
                 </li>
                  <li>
-                        <a href="kontakt.php"><?php echo $translate[$_SESSION["lang"]]["contact"]; ?></a>
+                        <a href="/semzad/webte2/kontakt.php"><?php echo $translate[$_SESSION["lang"]]["contact"]; ?></a>
                     </li>
             </ul>
         </div><!--/.nav-collapse -->

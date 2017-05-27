@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Média</title>
+    <title> <?php echo $translate[$_SESSION["lang"]]["media"]; ?></title>
     <link href="css/menu.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -88,34 +88,34 @@ include 'menu.php';
 
     <hr>
 
-    <!-- Linky -->
-    <div class="well">
-        <div class="row">
-            <div class="col-md-8">
-                <a href="http://is.stuba.sk/">AIS STU</a><br>
-                <a href="http://aladin.elf.stuba.sk/rozvrh/">Rozvrh hodín FEI</a><br>
-                <a href="http://elearn.elf.stuba.sk/moodle/">Moodle FEI</a><br>
-                <a href="http://www.sski.sk/webstranka/">SSKI</a><br>
-                <a href="https://www.jedalen.stuba.sk/WebKredit/">Jedáleň STU</a><br>
-                <a href="https://webmail.stuba.sk/">Webmail STU</a><br>
-                <a href="https://kis.cvt.stuba.sk/i3/epcareports/epcarep.csp?ictx=stu&language=1">Evidencia publikácií STU</a><br>
-                <a href="http://okocasopis.sk/">Časopis OKO</a><br>
-                <a href="https://www.facebook.com/UAMTFEISTU">Facebook ústavu</a><br>
-                <a href="https://www.youtube.com/channel/UCo3WP2kC0AVpQMIiJR79TdA">Youtube ústavu</a><br>
+     <!-- Linky -->
+        <div class="well">
+            <div class="row">
+                <div class="col-md-8">
+                    <a href="http://is.stuba.sk/"><?php echo $translate[$_SESSION["lang"]]["ais"];?></a><br>
+                    <a href="http://aladin.elf.stuba.sk/rozvrh/"><?php echo $translate[$_SESSION["lang"]]["rozvrh"];?></a><br>
+                    <a href="http://elearn.elf.stuba.sk/moodle/"><?php echo $translate[$_SESSION["lang"]]["moodle"];?></a><br>
+                    <a href="http://www.sski.sk/webstranka/">SSKI</a><br>
+                    <a href="https://www.jedalen.stuba.sk/WebKredit/"><?php echo $translate[$_SESSION["lang"]]["jedalen"];?></a><br>
+                    <a href="https://webmail.stuba.sk/"><?php echo $translate[$_SESSION["lang"]]["webmail"];?></a><br>
+                    <a href="https://kis.cvt.stuba.sk/i3/epcareports/epcarep.csp?ictx=stu&language=1"><?php echo $translate[$_SESSION["lang"]]["evidpubl"];?></a><br>
+                    <a href="http://okocasopis.sk/"><?php echo $translate[$_SESSION["lang"]]["magazin"];?></a><br>
+                    <a href="https://www.facebook.com/UAMTFEISTU"><?php echo $translate[$_SESSION["lang"]]["fb"];?></a><br>
+                    <a href="https://www.youtube.com/channel/UCo3WP2kC0AVpQMIiJR79TdA"><?php echo $translate[$_SESSION["lang"]]["youtube"];?></a><br>
+                </div>
             </div>
         </div>
-    </div>
 
-    <hr>
+        <hr>
 
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; DIvan LKorciciak DPetrik PFuchs PChynoransky</p>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; DIvan LKorciciak DPetrik PFuchs PChynoransky</p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
 
 </div>
 <!-- /.container -->

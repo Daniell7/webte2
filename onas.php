@@ -1,33 +1,9 @@
 <?php
 session_start();
 include 'texty.php';
-require 'config.php';
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-$conn->set_charset("utf8");
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$sql = "SELECT * FROM VIDEO";
-
-$result = $conn->query($sql);
-
-$videos = array();
-
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        $videos[] = $row;
-    }
-} else {
-    echo "ERROR: Nenajdeny vyraz v databaze";
-}
-//print_r($pole1);
-$conn->close();
- ?>
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 
 <head>
 
@@ -37,12 +13,11 @@ $conn->close();
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $translate[$_SESSION["lang"]]["video"];?></title>
+    <title><?php echo $translate[$_SESSION["lang"]]["about"]; ?></title>
     <link href="css/menu.css" rel="stylesheet">
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/video.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/modern-business.css" rel="stylesheet">
 
@@ -52,46 +27,78 @@ $conn->close();
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
 
-<?php
-include 'menu.php';
-?>
+   <?php
+     include 'menu.php';
+   ?>
+  
 
-<!-- Page Content -->
-<div class="container">
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-    <!-- Marketing Icons Section -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">
-               <?php echo $translate[$_SESSION["lang"]]["video"];?>
-            </h1>
-        </div>
-        <?php
-        for ($i = 0; $i < count($videos); $i++ ) {
-        ?>
-        <div class="col-md-12">
-            <div class="panel panel-default">
-                <div class="panel-heading shadow cursor" onclick="currentSlide(<?php echo $i+1;?>)" >
-                    <h4><?php echo $videos[$i]['Title-SK'];?></h4>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('Captions/Caption1.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2></h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('Captions/Caption2.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2></h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('Captions/Caption3.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2></h2>
                 </div>
             </div>
         </div>
-            <div class="col-md-6 slides">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/<?php echo $videos[$i]['Link'];?>" frameborder="0" allowfullscreen></iframe>
-            </div>
-        <?php }?>
-    </div>
-    <!-- /.row -->
 
-     <!-- Linky -->
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+
+        <!-- Features Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header"><?php echo $translate[$_SESSION["lang"]]["about"]; ?></h2>
+            </div>
+            <div class="col-md-12">
+                
+                <p><?php echo $translate[$_SESSION["lang"]]["abouttext"]; ?></p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Linky -->
         <div class="well">
             <div class="row">
                 <div class="col-md-8">
@@ -120,23 +127,21 @@ include 'menu.php';
             </div>
         </footer>
 
+    </div>
+    <!-- /.container -->
 
-</div>
-<!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-<script src="js/video.js"></script>
-<!-- Script to Activate the Carousel -->
-<script>
+    <!-- Script to Activate the Carousel -->
+    <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
-</script>
+    </script>
 
 </body>
 

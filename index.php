@@ -53,15 +53,11 @@ include 'menu.php';
     <div class="carousel-inner">
         <div class="item active">
             <div class="fill" style="background-image:url('Captions/Caption1.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>ÚAMT</h2>
-            </div>
+
         </div>
         <div class="item">
             <div class="fill" style="background-image:url('Captions/Caption2.jpg');"></div>
-            <div class="carousel-caption">
-                <h2>Pohľad na FEI STU</h2>
-            </div>
+
         </div>
         <div class="item">
             <div class="fill" style="background-image:url('Captions/Caption3.jpg');"></div>
@@ -90,104 +86,19 @@ include 'menu.php';
                <?php echo $translate[$_SESSION["lang"]]["welcome"];?>
             </h1>
         </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.3.7</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
-                </div>
-                <div class="panel-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                    <a href="#" class="btn btn-default">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /.row -->
-
-    <!-- Portfolio Section -->
-    <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">Portfolio Heading</h2>
+            <h3 class="page-header">
+                Čo je to mechatronika?
+            </h3>
         </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-            <a href="portfolio-item.html">
-                <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-            </a>
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>Mechatronika predstavuje inžiniersky odbor, ktorý stojí na rozhraní viacerých oblastí výskumu, vývoja a aplikácií. Kombinuje prvky mechaniky, elektroniky, automatizácie a výpočtovej techniky. Typický mechatronický systém príjima pomocou rôznych typov senzorov signály z vonkajšieho prostredia, ktoré spracuje a transformuje na vykonanie potrebnej sily, pohybu alebo iného typu akčného zásahu. Umožňuje rozšírenie mechanického systému o senzory a mikropočítače. Mechatronický systém je riadený softvérovým vybavením, ktoré je neoddeliteľnou súčasťou produktu a nevyhnutné pre jeho správne fungovanie.</p>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- /.row -->
-
-    <!-- Features Section -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h2 class="page-header">Modern Business Features</h2>
-        </div>
-        <div class="col-md-6">
-            <p>The Modern Business template by Start Bootstrap includes:</p>
-            <ul>
-                <li><strong>Bootstrap v3.3.7</strong>
-                </li>
-                <li>jQuery v1.11.1</li>
-                <li>Font Awesome v4.2.0</li>
-                <li>Working PHP contact form with validation</li>
-                <li>Unstyled page elements for easy customization</li>
-                <li>17 HTML pages</li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-        </div>
-        <div class="col-md-6">
-            <img class="img-responsive" src="http://placehold.it/700x450" alt="">
-        </div>
-    </div>
-    <!-- /.row -->
-
     <hr>
 
     <!-- Linky -->
