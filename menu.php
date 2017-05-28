@@ -23,7 +23,7 @@ body {
              location.reload();
             }
             };
-        xmlhttp.open("GET", "/projekt/webte2/functions.php?lang="+selector.value, true);
+        xmlhttp.open("GET", "/semzad/webte2/functions.php?lang="+selector.value, true);
         xmlhttp.send();
         
     }
