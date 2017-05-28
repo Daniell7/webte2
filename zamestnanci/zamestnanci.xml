@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Autor suboru: Daniel Petrík -->
+<!-- Posledna aktualizacia: máj 2017 -->
+<zamestnanci>
+	<zaznam>
+		<meno>Ing. Richard Balogh, PhD.</meno>
+		<miestnost>D110</miestnost>
+		<telefon>+421 (2) 60 291 411</telefon>
+		<oddelenie>Oddelenie elektroniky, mikropočítačov a PLC systémov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia>Zástupca vedúceho oddelenia OEMP</funkcia>
+  </zaznam>
+	<zaznam>
+		<meno>Ing. Igor Bélai, PhD.</meno>
+		<miestnost>D126</miestnost>
+		<telefon>+421 (2) 60 291 478</telefon>
+		<oddelenie>Oddelenie elektroniky, mikropočítačov a PLC systémov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Katarína Beringerová</meno>
+		<miestnost>A705</miestnost>
+		<telefon>+421 (2) 60 291 672</telefon>
+		<oddelenie>Administratívno - hospodársky úsek</oddelenie>
+		<zaradenie>technická pracovníčka</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Pavol Bisták, PhD.</meno>
+		<miestnost>D120</miestnost>
+		<telefon>+421 (2) 60 291 695</telefon>
+		<oddelenie>Oddelenie E-mobility, automatizácie a pohonov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Martin Bugár, PhD.</meno>
+		<miestnost>A708</miestnost>
+		<telefon>+421 (2) 60 291 579</telefon>
+		<oddelenie>Oddelenie E-mobility, automatizácie a pohonov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Ján Cigánek, PhD.</meno>
+		<miestnost>D104</miestnost>
+		<telefon>+421 (2) 60 291 686</telefon>
+		<oddelenie>Oddelenie informačných, komunikačných a riadiacich systémov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>doc. Ing. Peter Drahoš, PhD.</meno>
+		<miestnost>D118</miestnost>
+		<telefon>+421 (2) 60 291 669</telefon>
+		<oddelenie>Oddelenie elektroniky, mikropočítačov a PLC systémov</oddelenie>
+		<zaradenie>docent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>František Erdödy</meno>
+		<miestnost>AS39</miestnost>
+		<telefon>+421 (2) 60 291 818</telefon>
+		<oddelenie>Administratívno - hospodársky úsek</oddelenie>
+		<zaradenie>prevádzkový zámočník</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>prof. Ing. Viktor Ferencey, PhD.</meno>
+		<miestnost>A802</miestnost>
+		<telefon>+421 (2) 60 291 438</telefon>
+		<oddelenie>Oddelenie E-mobility, automatizácie a pohonov</oddelenie>
+		<zaradenie>profesor CSc.</zaradenie>
+		<funkcia>Zástupca vedúceho oddelenia OEAP</funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>doc. Ing. Peter Fuchs, PhD.</meno>
+		<miestnost>B011</miestnost>
+		<telefon>+421 (2) 60 291 775</telefon>
+		<oddelenie>Oddelenie elektroniky, mikropočítačov a PLC systémov</oddelenie>
+		<zaradenie>vedecký pracovník KS IIa. CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Gabriel Gálik</meno>
+		<miestnost>A706</miestnost>
+		<telefon>+421 (2) 60 291 559</telefon>
+		<oddelenie>Oddelenie aplikovanej mechaniky a mechatroniky</oddelenie>
+		<zaradenie>výskumný pracovník s VŠ vzdelaním</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>doc. Ing. Vladimír Goga, PhD.</meno>
+		<miestnost>A702</miestnost>
+		<telefon>+421 (2) 60 291 687</telefon>
+		<oddelenie>Oddelenie aplikovanej mechaniky a mechatroniky</oddelenie>
+		<zaradenie>docent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Oto Haffner, PhD.</meno>
+		<miestnost>D125</miestnost>
+		<telefon>+421 (2) 60 291 315</telefon>
+		<oddelenie>Oddelenie elektroniky, mikropočítačov a PLC systémov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Juraj Hrabovský, PhD.</meno>
+		<miestnost>A706</miestnost>
+		<telefon>+421 (2) 60 291 559</telefon>
+		<oddelenie>Oddelenie aplikovanej mechaniky a mechatroniky</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>prof. Ing. Mikuláš Huba, PhD.</meno>
+		<miestnost>D112</miestnost>
+		<telefon>+421 (2) 60 291 771</telefon>
+		<oddelenie>Oddelenie E-mobility, automatizácie a pohonov</oddelenie>
+		<zaradenie>profesor CSc.</zaradenie>
+		<funkcia>Riaditeľ ústavu, vedúci oddelenia OEAP</funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Mária Hypiusová, PhD.</meno>
+		<miestnost>D122</miestnost>
+		<telefon>+421 (2) 60 291 193</telefon>
+		<oddelenie>Oddelenie informačných, komunikačných a riadiacich systémov</oddelenie>
+		<zaradenie>odborná asistentka CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Štefan Chamraz, PhD.</meno>
+		<miestnost>D107</miestnost>
+		<telefon>+421 (2) 60 291 848</telefon>
+		<oddelenie>Oddelenie elektroniky, mikropočítačov a PLC systémov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Jakub Jakubec, PhD.</meno>
+		<miestnost>A707</miestnost>
+		<telefon>+421 (2) 60 291 452</telefon>
+		<oddelenie>Oddelenie aplikovanej mechaniky a mechatroniky</oddelenie>
+		<zaradenie>výskumný pracovník s VŠ vzdelaním</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Katarína Kermietová</meno>
+		<miestnost>D116</miestnost>
+		<telefon>+421 (2) 60 291 598</telefon>
+		<oddelenie></oddelenie>
+		<zaradenie>odborná administratívna pracovníčka</zaradenie>
+		<funkcia>vedúca oddelenia AHU</funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Michal Kocúr, PhD.</meno>
+		<miestnost>D104</miestnost>
+		<telefon>+421 (2) 60 291 686</telefon>
+		<oddelenie>Oddelenie E-mobility, automatizácie a pohonov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>doc. Ing. Alena Kozáková, PhD.</meno>
+		<miestnost>D111</miestnost>
+		<telefon>+421 (2) 60 291 563</telefon>
+		<oddelenie>Oddelenie informačných, komunikačných a riadiacich systémov</oddelenie>
+		<zaradenie>docentka CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>prof. Ing. Štefan Kozák, PhD.</meno>
+		<miestnost>D115</miestnost>
+		<telefon>+421 (2) 60 291 281</telefon>
+		<oddelenie>Oddelenie elektroniky, mikropočítačov a PLC systémov</oddelenie>
+		<zaradenie>profesor CSc.</zaradenie>
+		<funkcia>Vedúci oddelenia OEMP</funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Erik Kučera, PhD.</meno>
+		<miestnost>D125</miestnost>
+		<telefon>+421 (2) 60 291 315</telefon>
+		<oddelenie>Oddelenie informačných, komunikačných a riadiacich systémov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia>administrátor web stránky</funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>doc. Ing. Vladimír Kutiš, PhD.</meno>
+		<miestnost>A707</miestnost>
+		<telefon>+421 (2) 60 291 452</telefon>
+		<oddelenie>Oddelenie aplikovanej mechaniky a mechatroniky</oddelenie>
+		<zaradenie>docent CSc.</zaradenie>
+		<funkcia>Zástupca vedúceho oddelenia OAMM</funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>prof. Ing. Justín Murín, DrSc.</meno>
+		<miestnost>A704</miestnost>
+		<telefon>+421 (2) 60 291 611, +421 (2) 65 427 192</telefon>
+		<oddelenie>Oddelenie aplikovanej mechaniky a mechatroniky</oddelenie>
+		<zaradenie>profesor DrSc.</zaradenie>
+		<funkcia>vedúci oddelenia OAMM</funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Jakub Osuský, PhD.</meno>
+		<miestnost>D123</miestnost>
+		<telefon>+421 (2) 60 291 356</telefon>
+		<oddelenie>Oddelenie informačných, komunikačných a riadiacich systémov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Juraj Paulech, PhD.</meno>
+		<miestnost>A701</miestnost>
+		<telefon>+421 (2) 60 291 562</telefon>
+		<oddelenie>Oddelenie aplikovanej mechaniky a mechatroniky</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>doc. Ing. Danica Rosinová, PhD.</meno>
+		<miestnost>D111</miestnost>
+		<telefon>+421 (2) 60 291 563</telefon>
+		<oddelenie>Oddelenie informačných, komunikačných a riadiacich systémov</oddelenie>
+		<zaradenie>docentka CSc.</zaradenie>
+		<funkcia>Vedúca oddelenia OIKR</funkcia>
+	</zaznam>
+	<zaznam>
+		<meno>Ing. Tibor Sedlár</meno>
+		<miestnost>A803</miestnost>
+		<telefon>+421 (2) 60 291 399</telefon>
+		<oddelenie>Oddelenie aplikovanej mechaniky a mechatroniky</oddelenie>
+		<zaradenie>odborný asistent bez vedeckej hodnosti</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+  <zaznam>
+		<meno>Ing. Peter Ťapák, PhD.</meno>
+		<miestnost>D121</miestnost>
+		<telefon>+421 (2) 60 291 569</telefon>
+		<oddelenie>Oddelenie E-mobility, automatizácie a pohonov</oddelenie>
+		<zaradenie>odborný asistent CSc.</zaradenie>
+		<funkcia></funkcia>
+	</zaznam>
+  <zaznam>
+		<meno>doc. Ing. Katarína Žáková, PhD.</meno>
+		<miestnost>D119</miestnost>
+		<telefon>+421 (2) 60 291 742</telefon>
+		<oddelenie>Oddelenie informačných, komunikačných a riadiacich systémov</oddelenie>
+		<zaradenie>docentka CSc.</zaradenie>
+		<funkcia>Zástupkyňa vedúcej oddelenia OIKR</funkcia>
+	</zaznam>
+</zamestnanci>
