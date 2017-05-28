@@ -1,0 +1,142 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: black;
+}
+
+#content {
+    width: 95%;
+    margin: 1% auto;
+    background-color: #d5dcf3;
+    overflow: auto;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+#login-form {
+    width: 400px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.input-field label, .input-field input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#profile-form {
+    width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+
+#profile-form .input-field {
+    margin: 0 auto 20px auto;
+}
+
+#profile-form button[type=submit] {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#menu {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+
+#menu .item {
+    display: inline-block;
+    padding: 10px 15px;
+    border-right: 1px solid white;
+    cursor: pointer;
+}
+
+#admin-panel {
+    width: 200px;
+    background-color: #333;
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 40px;
+    color: white;
+    vertical-align: top;
+}
+
+#admin-panel .item {
+    padding: 10px 15px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+#admin-panel .item:last-child {
+    border-bottom: 1px solid black;
+}
+
+#main-content {
+    display: inline-block;
+    max-width: 850px;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 30px;
+}
+
+.icon-check {
+    font-family: 'simple-line-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+.container table {
+    background-color: #efe;
+}
+
+.container table td {
+    padding: 3px;
+    text-align: center;
+}
+
+.container table td:first-child {
+    text-align: left;
+}
+
+.container table th {
+    padding: 5px;
+}
+
+.container table, .container table td, .container table th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.container h2 {
+    margin-top: 0;
+}
+
+#edit-users th {
+    white-space: nowrap;
+}
+
+#edit-users td, #edit-users th {
+    padding: 5px;
+    word-wrap: break-word;
+}
+
+#edit-users {
+    background-color: #efe;
+}
+
+#edit-users, table#edit-users td, table#edit-users th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
