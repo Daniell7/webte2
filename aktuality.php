@@ -12,6 +12,12 @@ require 'config.php';
 include 'texty.php';
 
 // Create connection
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 $conn->set_charset("utf8");
@@ -24,23 +30,51 @@ if(!isset($_SESSION["offset"])){
     $_SESSION["offset"]=0;
 }
 
-$sql = "SELECT * FROM aktuality WHERE date_expire >= '".date("Y-m-d")."' AND language like '".$_SESSION["lang"]."' LIMIT ".$_SESSION["offset"].",5";
-//$sql2 = "SELECT * FROM FOTOGALERIA WHERE Date = '2015-09-25'";
 
-//$result2 = $conn->query($sql2);
+$sql = "SELECT * FROM aktuality WHERE ";
+if(!(isset($_SESSION["show_inactive"]) && $_SESSION["show_inactive"])){
+    $sql.="date_expire >= '".date("Y-m-d")."' AND ";
+}
+
+$sql.="language like '".$_SESSION["lang"]."' ";
+
+if(isset($_SESSION["cat"]) && !$_SESSION["cat"]){
+    $sql.=" AND type like '".test_input($_POST["cat"])."' ";
+}
+
+
 $news=array();
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
+    
+     $sql = "SELECT * FROM aktuality WHERE";  
+     $_SESSION["offset"]=0;
+    
+    if(!(isset($_POST["show_inactive"]) && test_input($_POST["show_inactive"])=="on")){
+        $sql.=" date_expire >= '".date("Y-m-d")."' AND";
+        $_SESSION["show_inactive"]=true;
+    }  else {
+       $_SESSION["show_inactive"]=false;  
+    }
+    $sql.=" language like '".$_SESSION["lang"]."'"; 
+    if(test_input($_POST["cat"])!="all"){
+        $sql.=" AND type like '".test_input($_POST["cat"])."' ";
+        $_SESSION["type"]=test_input($_POST["cat"]);
+    }  else {
+        $_SESSION["type"]=false;
+    }
     
 }
 
 if($_SERVER["REQUEST_METHOD"] == "GET"){
     if(isset($_GET["offset"])){
-        $sql = "SELECT * FROM aktuality WHERE date_expire >= '".date("Y-m-d")."' AND language like '".$_SESSION["lang"]."' LIMIT ".$_SESSION["offset"].",5";
+        
          $_SESSION["offset"]=$_GET["offset"];
+        
+        
     }
 }
-
+$sql.= "LIMIT ".$_SESSION["offset"].",5";
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()) {
         $news[] = $row;
@@ -101,10 +135,18 @@ include 'menu.php';
             </h1>
         </div>
         <div class="col-lg-12">
-            <h4>
-                <?php echo $translate[$_SESSION["lang"]]["dod"];?>
+            <form method="Post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+               
+                <input type="checkbox" name="show_inactive">&nbsp;<label>Zobraz neaktívne aktuality</label>
+                &nbsp;<label>Kategória: </label><select name="cat">
+                    <option value="all">Všetky</option>
+                    <option value="aktuality">Oznamy</option>
+                    <option value="propagácia">Propagácia</option>
+                    <option value="zo života ústavu">Zo života ústavu</option>
+                </select>
+                <input type="submit" value="Filtruj">
                 
-            </h4>
+            </form>
         </div>
         
         
@@ -116,6 +158,7 @@ include 'menu.php';
                 <?php
            for ($i = 0; $i < count($news); $i++ ) {
               echo "<tr><td><h4>".$news[$i]["title"]."</h4><hr></td></tr>";
+              echo "<tr><td>".$news[$i]["date_expire"]."</td></tr>";
               echo "<tr style='border-bottom: 1px solid grey;'><td>".$news[$i]["content"]
                       . "<hr></td></tr>";}
                       echo "<tr><td>";
